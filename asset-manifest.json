@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/react_piggy_bank/static/js/main.6ed52334.chunk.js",
+    "main.js.map": "/react_piggy_bank/static/js/main.6ed52334.chunk.js.map",
+    "runtime~main.js": "/react_piggy_bank/static/js/runtime~main.fa537acb.js",
+    "runtime~main.js.map": "/react_piggy_bank/static/js/runtime~main.fa537acb.js.map",
+    "static/js/2.14f1dc44.chunk.js": "/react_piggy_bank/static/js/2.14f1dc44.chunk.js",
+    "static/js/2.14f1dc44.chunk.js.map": "/react_piggy_bank/static/js/2.14f1dc44.chunk.js.map",
+    "index.html": "/react_piggy_bank/index.html",
+    "precache-manifest.e7160e4a5012ea130376fd66757676b3.js": "/react_piggy_bank/precache-manifest.e7160e4a5012ea130376fd66757676b3.js",
+    "service-worker.js": "/react_piggy_bank/service-worker.js"
+  }
+}
