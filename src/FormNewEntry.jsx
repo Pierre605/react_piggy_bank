@@ -9,7 +9,7 @@ function FormNewEntry(props) {
 			<label className="form-label">Name</label>
 			</div>
 			<div>
-				<input className="form-control" type="text" id="name"/>
+				<input className="form-control" type="text" id="name" required/>
 			</div>
 			<div>
 				<label className="form-label">Description</label>
@@ -21,7 +21,7 @@ function FormNewEntry(props) {
 				<label className="form-label">Price</label>
 			</div>
 			<div>
-				<input className="form-control" type="text" id="price"/>
+				<input className="form-control" type="text" id="price" required/>
 			</div>
 			<div>
 				<button type="submit">Add expense</button>

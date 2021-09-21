@@ -3,7 +3,7 @@ import React from 'react'
 function Total (props) {
     return (
         <>
-        <div>Total: {props.entries.price}</div>
+        <div>TOTAL: {props.somme}</div>
         </>
     )
 }

@@ -17,11 +17,26 @@ class App extends React.Component {
         }
     }
 
+
+
     handleDelete = (id) => {
         console.log(id)
         const RemainEntries = this.state.entries.filter(entry => entry.id !== id)
-        this.setState({entries: RemainEntries})
-
+        this.setState({entries: RemainEntries}, () => {if (this.state.entries.length > 0) {const prices = []
+         this.state.entries.map((elem) => {
+                prices.push(elem.price)
+        return(
+             null
+         )
+        })
+    
+            const reducer = (accumulator, currentValue) => accumulator + currentValue;
+            let Total = prices.reduce(reducer)
+            console.log(Total)
+            this.setState({total: Total})}
+            
+        else {this.setState({total: 0})}})
+        
     }
 
     handleNewEntry = (event) => {
@@ -39,21 +54,41 @@ class App extends React.Component {
         event.currentTarget.name.value = ''
         event.currentTarget.descript.value = ''
         event.currentTarget.price.value = ''
+
+        let Somme = this.updateTotal()
+        this.setState({total: Somme})
+        console.log(Somme)
+
+
     }
 
-    updateTotal = () => {
-        let prices = this.state.entries.price
-        const reducer = (accumulator, currentValue) => accumulator + currentValue;
-        console.log(prices.reduce(reducer))
+    updateTotal() {
+        const prices = []
+        this.state.entries.map((elem) => {
+            prices.push(elem.price)
+            return(
+                null
+            )
+        })
 
+        const reducer = (accumulator, currentValue) => accumulator + currentValue;
+        let Total = prices.reduce(reducer)
+        console.log(Total)
+        return (Total)
+       
+    }
+    componentDidMount() {
+        let Somme = this.updateTotal()
+        this.setState({total: Somme})
+        console.log(Somme)
     }
 
     render() {
         return (
             <div>
                 <Table entries={this.state.entries} handleDelete={this.handleDelete} />
-                <Total entries={this.state.entries} total={this.updateTotal}/>
-                <FormNewEntry handleNewEntry={this.handleNewEntry}/>
+                <Total somme={this.state.total} />
+                <FormNewEntry handleNewEntry={this.handleNewEntry} />
             </div>
         )
     }
