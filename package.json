@@ -2,7 +2,7 @@
   "name": "initiation_day00",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Pierre605.github.io/react_piggy_bank",
+  "homepage": "https://Pierre605.github.io/react_piggy_bank",
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
